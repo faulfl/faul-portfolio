@@ -105,7 +105,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-[#020617]/95 backdrop-blur border-t border-white/10">
+      <div className="md:hidden bg-[#020617]/70 backdrop-blur-md">
           <div className="flex flex-col px-6 py-6 gap-4 text-sm">
             {sections.map((s) => (
               <NavLink
