@@ -53,7 +53,7 @@ export default function Skills() {
         </p>
 
         {/* Marquee */}
-        <div className="relative overflow-hidden mb-24">
+        <div className="relative mb-24 overflow-hidden pt-8">
           <div className="tech-marquee gap-14 px-6">
             {[...skills, ...skills].map((skill, i) => {
               const Icon = skill.icon;

@@ -68,7 +68,10 @@ export default function Navbar() {
         fixed top-0 w-full z-50 transition-all duration-300
         ${
           scrolled
-            ? "bg-[#020617]/70 backdrop-blur border-b border-white/10"
+            ? `
+              bg-[#020617]/40 backdrop-blur-sm
+              md:bg-[#020617]/70 md:backdrop-blur
+            `
             : "bg-transparent"
         }
       `}
