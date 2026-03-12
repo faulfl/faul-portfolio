@@ -1,17 +1,23 @@
 import {
   FaPython,
+  FaJava,
+  FaFigma,
   FaFileExcel,
-  FaDraftingCompass,
-  FaCubes,
+  FaFileWord,
+  FaReact,
+  FaGithub,
+  FaLinux,
 } from "react-icons/fa";
-import { SiR } from "react-icons/si";
 
 const skills = [
-  { name: "R Programming", icon: SiR, color: "#276DC3" },
-  { name: "Microsoft Excel", icon: FaFileExcel, color: "#22c55e" },
-  { name: "AutoCAD", icon: FaDraftingCompass, color: "#ef4444" },
-  { name: "Autodesk Inventor", icon: FaCubes, color: "#f97316" },
   { name: "Python", icon: FaPython, color: "#3776ab" },
+  { name: "Java", icon: FaJava, color: "#f89820" },
+  { name: "Figma", icon: FaFigma, color: "#a259ff" },
+  { name: "Microsoft Excel", icon: FaFileExcel, color: "#22c55e" },
+  { name: "Microsoft Word", icon: FaFileWord, color: "#2b579a" },
+  { name: "React", icon: FaReact, color: "#61dafb" },
+  { name: "GitHub", icon: FaGithub, color: "#ffffff" },
+  { name: "Linux", icon: FaLinux, color: "#fcc624" },
 ];
 
 export default function Skills() {
@@ -29,19 +35,20 @@ export default function Skills() {
       "
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
-
-        <h2 className="text-3xl font-bold text-gradient mb-4">
+        {/* TITLE */}
+        <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
           Tech Stack
         </h2>
 
         <p className="text-slate-400 max-w-xl mx-auto mb-16">
-          Technologies and tools I use for data analysis, process improvement, and industrial system design.
+          Technologies and tools I use for programming, system development, and
+          UI design.
         </p>
 
-        {/* Marquee */}
+        {/* MARQUEE */}
         <div className="relative mb-12 pt-6 flex justify-center overflow-hidden">
-        <div className="w-full max-w-4xl">
-          <div className="tech-marquee gap-6 px-4 py-4">
+          <div className="w-full max-w-4xl">
+            <div className="tech-marquee gap-12 px-8 py-6">
               {[...skills, ...skills, ...skills].map((skill, i) => {
                 const Icon = skill.icon;
                 return (
@@ -56,7 +63,8 @@ export default function Skills() {
                         filter: "drop-shadow(0 0 12px rgba(255,255,255,0.15))",
                       }}
                     />
-                    <span className="mt-2 text-sm text-slate-400 group-hover:text-white">
+
+                    <span className="mt-3 text-sm text-slate-400 group-hover:text-white">
                       {skill.name}
                     </span>
                   </div>
@@ -66,37 +74,45 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* CARDS (TETAP) */}
+        {/* SKILL CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-          <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-            <h3 className="font-semibold mb-2 text-slate-100">Data Analysis</h3>
+          <div className="group p-6 rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <h3 className="font-semibold mb-2 text-slate-100 group-hover:text-cyan-400 transition-colors">
+              Programming
+            </h3>
             <p className="text-sm text-slate-400">
-              Statistical analysis and decision support using R and Excel.
+              Building applications and solving problems using Python and Java.
             </p>
           </div>
 
-          <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-            <h3 className="font-semibold mb-2 text-slate-100">Process Improvement</h3>
+          <div className="group p-6 rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <h3 className="font-semibold mb-2 text-slate-100 group-hover:text-cyan-400 transition-colors">
+              UI / UX Design
+            </h3>
             <p className="text-sm text-slate-400">
-              Workflow analysis and efficiency optimization.
+              Designing user interfaces and prototypes using Figma.
             </p>
           </div>
 
-          <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-            <h3 className="font-semibold mb-2 text-slate-100">Manufacturing Systems</h3>
+          <div className="group p-6 rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <h3 className="font-semibold mb-2 text-slate-100 group-hover:text-cyan-400 transition-colors">
+              Office Tools
+            </h3>
             <p className="text-sm text-slate-400">
-              Production systems and operations planning.
+              Data processing and documentation using Microsoft Excel and Word.
             </p>
           </div>
 
-          <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-            <h3 className="font-semibold mb-2 text-slate-100">CAD & Technical Tools</h3>
+          <div className="group p-6 rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <h3 className="font-semibold mb-2 text-slate-100 group-hover:text-cyan-400 transition-colors">
+              System Development
+            </h3>
             <p className="text-sm text-slate-400">
-              Technical drawing and 3D modeling with AutoCAD and Inventor.
+              Developing and exploring digital systems through academic
+              projects.
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );

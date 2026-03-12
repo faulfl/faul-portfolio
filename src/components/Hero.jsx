@@ -1,5 +1,8 @@
 import { useRef, useState, useEffect } from "react";
-import foto from "../assets/foto/Foto 3x4.jpeg";
+import { Download } from "lucide-react";
+
+import foto from "../assets/foto/profile.jpeg";
+import cv from "../assets/foto/Faul_Cahyaditya_Wijaya_CV.pdf";
 
 export default function Hero() {
   const cardRef = useRef(null);
@@ -8,7 +11,7 @@ export default function Hero() {
   /* =======================
      TYPING EFFECT (NAME)
   ======================= */
-  const fullName = "Fina Adiyanti";
+  const fullName = "Faul Cahyaditya Wijaya";
   const [displayText, setDisplayText] = useState("");
   const [typingDone, setTypingDone] = useState(false);
 
@@ -86,11 +89,10 @@ export default function Hero() {
       className="relative min-h-screen flex items-center pt-28 pb-32 overflow-hidden"
     >
       <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 sm:gap-14 items-center">
-
         {/* TEXT */}
         <div className="animate-fade-up md:pl-6 text-center md:text-left">
           <span className="block text-xs sm:text-sm tracking-widest text-cyan-400 mb-3">
-            INDUSTRIAL ENGINEERING STUDENT
+            INFORMATICS STUDENT
           </span>
 
           {/* NAME */}
@@ -112,17 +114,52 @@ export default function Hero() {
             </span>
           </h1>
 
+          {/* CTA BUTTONS */}
+          <div className="mt-8 flex gap-4 justify-center md:justify-start">
+            {/* VIEW PROJECTS */}
+            <a
+              href="#projects"
+              className="
+                px-7 py-3 rounded-lg
+                bg-cyan-500 text-white
+                text-sm font-semibold
+                hover:bg-cyan-400
+                transition
+                shadow-lg shadow-cyan-500/20
+              "
+            >
+              View Projects
+            </a>
+
+            {/* DOWNLOAD CV */}
+            <a
+              href={cv}
+              download
+              className="
+                flex items-center gap-2
+                px-7 py-3 rounded-lg
+                border border-white/20
+                text-sm font-semibold
+                hover:border-cyan-400
+                hover:text-cyan-400
+                transition
+              "
+            >
+              <Download size={18} />
+              Download CV
+            </a>
+          </div>
+
           <p className="mt-5 text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed text-sm sm:text-base">
-            An Industrial Engineering student with a strong interest in data analysis, 
-            process improvement, and industrial systems. Experienced in using R programming,
-            Microsoft Excel, AutoCAD, and Autodesk Inventor to support data-driven decision 
-            making and efficient system design.
+            An Informatics student with a strong interest in software
+            development, UI/UX design, and system development. Experienced in
+            using tools such as Python, Java, Figma, and Microsoft Excel to
+            build and support digital solutions.
           </p>
         </div>
 
         {/* PHOTO CARD */}
         <div className="relative flex justify-center animate-fade-up animate-delay-2">
-
           {/* THIN BLUR FRAME */}
           <div className="relative rounded-2xl p-[4px]">
             <div
@@ -165,7 +202,7 @@ export default function Hero() {
 
               <img
                 src={foto}
-                alt="Fina Adiyanti"
+                alt="Faul Cahyaditya Wijaya"
                 className="
                   relative
                   w-full h-full

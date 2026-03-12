@@ -18,19 +18,22 @@ export default function About() {
       >
         {/* ===== LEFT : ABOUT TEXT ===== */}
         <div className="animate-fade-up text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gradient mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
             About Me
           </h2>
 
           <p className="text-slate-400 leading-relaxed mb-5 text-sm sm:text-base">
-            I am an Industrial Engineering student with a strong interest in data analysis, process improvement, and industrial systems. 
-            I enjoy analyzing data, identifying inefficiencies, and designing solutions to improve system performance.
+            I am an Informatics student with a strong interest in software development, 
+            UI/UX design, and digital system development. I enjoy building systems, 
+            designing user-friendly interfaces, and developing solutions that can 
+            support real-world digital needs.
           </p>
 
           <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
-            My academic background has equipped me with knowledge in statistics, operations research, manufacturing systems, and work system design. 
-            I am experienced in using R programming, Microsoft Excel, AutoCAD, and Autodesk Inventor to support data-driven decision making and effective 
-            industrial solutions.
+            I have experience working with technologies such as Python, Java, 
+            Microsoft Excel, and Figma to develop applications, design interfaces, 
+            and support system development. Through academic projects, I continue 
+            to improve my skills in programming, system design, and problem solving.
           </p>
         </div>
 
@@ -43,26 +46,26 @@ export default function About() {
           "
         >
           <SkillCard
-            title="Data Analysis"
-            desc="Statistical analysis & data-driven insights"
+            title="Software Development"
+            desc="Building applications using Python & Java"
             gradient="from-cyan-500/20 via-transparent to-blue-500/20"
           />
 
           <SkillCard
-            title="Process Improvement"
-            desc="System efficiency & workflow optimization"
+            title="UI/UX Design"
+            desc="Designing user interfaces with Figma"
             gradient="from-purple-500/20 via-transparent to-cyan-500/20"
           />
 
           <SkillCard
-            title="Manufacturing Systems"
-            desc="Production systems & operations planning"
+            title="System Development"
+            desc="Developing and managing digital systems"
             gradient="from-red-500/20 via-transparent to-orange-500/20"
           />
 
           <SkillCard
             title="Technical Tools"
-            desc="R Programming, Excel, AutoCAD & Inventor"
+            desc="Python, Java, Microsoft Excel & Figma"
             gradient="from-emerald-500/20 via-transparent to-cyan-500/20"
           />
         </div>
