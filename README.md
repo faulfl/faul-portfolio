@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Portfolio
+# 🚀 Portofolio
 
 A modern personal portfolio built with **React** and **Tailwind CSS v4**, designed with a clean architecture, responsive layout, and smooth user experience.
 
